@@ -1,11 +1,11 @@
 import unittest
-from trie_model import build_trie_from_patterns, Trie
+from trie_model import build_trie, Trie
 
 class TestTrieStructure(unittest.TestCase):
 
     def setUp(self):
         self.patterns = ["apple", "app", "apricot", "banana"]
-        self.trie = build_trie_from_patterns(self.patterns)
+        self.trie = build_trie(self.patterns)
 
     def test_search_existing_words(self):
         self.assertTrue(self.trie.search("apple"))
